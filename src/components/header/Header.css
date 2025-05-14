@@ -1,5 +1,30 @@
-.player-container{
-    display: flex;
-    background-color: blueviolet;
+@import url('https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap');
 
+.header-container{
+    display: flex;
+    height: 7rem;
+    font-family: 'Syne Tactile';
+    font-size: 2rem;
+}
+
+.text-ribbon{
+    display: flex;
+    background-color: #CA7DF9;
+    width: 70rem;
+    height: 3rem;
+    margin-top: 2rem;
+    justify-content: flex-start;
+}
+
+.now-playing{
+    margin: 0rem;
+    margin-left: 1rem;
+}
+
+.player-container{
+    height: 5rem;
+    width: 25rem;
+    align-self: center;
+    background-color:#CCFF26;
+    color: black;
 }
