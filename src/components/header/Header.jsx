@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
-import "./Heather.css"
+import "./Header.css";
 
-function Heather(){
-    return(
+function Header() {
+    return (
         <div className="player-container">
-            
+           <p> Now Playing</p>
         </div>
-
     );
 }
 
-export default Heather
+export default Header;
