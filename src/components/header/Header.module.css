@@ -10,7 +10,7 @@
 .textRibbon{
     display: flex;
     background-color: #CA7DF9;
-
+    width: 100%;
     height: 3rem;
     margin-top: 2rem;
     justify-content: space-around;
