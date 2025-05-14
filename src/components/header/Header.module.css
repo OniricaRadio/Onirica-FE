@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap');
 
-.headerContainer{
+.headerContainer {
     display: flex;
-    height: 7rem;
+    justify-content: space-between;
+    align-items: center;
     font-family: 'Syne Tactile';
     font-size: 2rem;
+    height: 7rem;
+    width: 100%;
 }
 
-.textRibbon{
+/* Text ribbon with Now Playing and Player */
+.textRibbon {
     display: flex;
     background-color: #CA7DF9;
     width: 100%;
@@ -17,15 +21,63 @@
     width: -webkit-fill-available;
 }
 
-.nowPlaying{
+/* Now Playing section */
+.nowPlaying {
     margin: 0rem;
     margin-left: 1rem;
 }
 
-.playerContainer{
+/* Player container */
+.playerContainer {
     height: 5rem;
     width: 25rem;
     align-self: center;
-    background-color:#CCFF26;
-    color: black;
+    background-color: #CCFF26;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+/* 📱 Mobile adjustments */
+@media (max-width: 768px) {
+    /* Ensure full screen height for header container */
+    .headerContainer {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    /* Adjust text ribbon layout */
+    .textRibbon {
+        flex-direction: column;
+        height: auto;
+        margin-top: 0;
+        justify-content: center; /* Centering content on mobile */
+    }
+
+    /* Adjust player container size */
+    .playerContainer {
+        width: 80%; /* Reduced width for mobile */
+        height: 4rem; /* Reduced height */
+        padding: 1rem;
+    }
+
+    /* Reduce font size for mobile */
+    .nowPlaying {
+        font-size: 1rem; /* Smaller font size */
+    }
+
+    /* Adjust text ribbon for mobile */
+    .textRibbon {
+        padding: 1rem 0;
+    }
 }
