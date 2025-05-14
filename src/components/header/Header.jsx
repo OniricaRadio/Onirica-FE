@@ -1,15 +1,19 @@
 import { useState, useEffect } from "react";
-import "./Header.css";
+import styles from "./Header.module.css";
+import ButtonSound from "../buttonSound/ButtonSound"
+import Button from "../button/Button";
+import saveIcon from "../../../public/img/starblue.svg"
 
 function Header() {
     return (
-    <div className="header-container">
-    <div className="text-ribbon">
-        <p className="now-playing">Now Playing:</p>
-        <div className="player-container">
+    <div className={styles.headerContainer}>
+    <div className={styles.textRibbon}>
+        <p className={styles.nowPlaying}>Now Playing:</p>
+        <div className={styles.playerContainer}>
             <p>when you die - mgmt</p>
         </div>
-     
+     <ButtonSound/>
+     <Button icon={saveIcon} alt={ "saveIcon"} className={styles.icon}/>
     </div>    
     </div>
 );

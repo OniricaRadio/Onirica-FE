@@ -1,27 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap');
 
-.header-container{
+.headerContainer{
     display: flex;
     height: 7rem;
     font-family: 'Syne Tactile';
     font-size: 2rem;
 }
 
-.text-ribbon{
+.textRibbon{
     display: flex;
     background-color: #CA7DF9;
     width: 70rem;
     height: 3rem;
     margin-top: 2rem;
-    justify-content: flex-start;
+    justify-content: space-around;
 }
 
-.now-playing{
+.nowPlaying{
     margin: 0rem;
     margin-left: 1rem;
 }
 
-.player-container{
+.playerContainer{
     height: 5rem;
     width: 25rem;
     align-self: center;
