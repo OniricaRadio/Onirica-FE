@@ -8,7 +8,11 @@ function HomePage() {
         "/public/img/Art Fire GIF by Daniel Barreto.gif",
         "/public/img/mirror GIF by ewanjonesmorris.gif",
         "/public/img/Tree Mirror GIF by Blanca Viñas.gif",
-        "/public/img/Photography Reflection GIF by John Fogarty.gif"
+        "/public/img/Photography Reflection GIF by John Fogarty.gif",
+        "/public/img/sphere.gif",
+        "/public/img/spiral.gif",
+        "/public/img/spiral3d.gif",
+        "/public/img/spiralwater.gif"
     ];
 
     const [currentGif, setCurrentGif] = useState(gifList[0]);
@@ -20,7 +24,7 @@ function HomePage() {
         };
 
         changeGif(); 
-        const interval = setInterval(changeGif, 180000); 
+        const interval = setInterval(changeGif, 90000); 
 
         return () => clearInterval(interval); 
     }, []);
