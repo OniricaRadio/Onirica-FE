@@ -10,7 +10,7 @@ function Header() {
     <div className={styles.textRibbon}>
         <p className={styles.nowPlaying}>Now Playing:</p>
         <div className={styles.playerContainer}>
-            <p>when you die - mgmt</p>
+            <p>rheya - wild nothing </p>
         </div>
      <ButtonSound/>
      <Button icon={saveIcon} alt={ "saveIcon"} className={styles.icon}/>
