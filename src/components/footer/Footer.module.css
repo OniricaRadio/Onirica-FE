@@ -14,13 +14,12 @@
     z-index: 2;
 }
 
-/* Adjust text styles */
+
 .footerContainer p {
     margin: 0;
     font-size: 1.25rem;
 }
 
-/* Link styling */
 .link {
     text-decoration: none;
     color: inherit;
@@ -33,10 +32,10 @@
     color: #0D00A4;
 }
 
-/* 📱 Responsive adjustments for smaller screens */
+
 @media (max-width: 768px) {
     .footerContainer {
-        flex-direction: row; /* Keep the footer in a row layout */
+        flex-direction: row; 
         height: auto;
         gap: 0.5rem;
         padding: 0rem 0.5rem;
