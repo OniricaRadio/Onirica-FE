@@ -1,4 +1,3 @@
-/* -------------------- Layout Containers -------------------- */
 
 .contentWrapper {
   display: flex;
@@ -17,7 +16,6 @@
   position: relative;
 }
 
-/* -------------------- Title -------------------- */
 
 .titleContainer {
   display: flex;
@@ -36,7 +34,6 @@
   margin: 0;
 }
 
-/* -------------------- Text -------------------- */
 
 .text {
   font-family: 'Syne Mono', monospace;
@@ -52,62 +49,3 @@
   display: block;
 }
 
-
-/* -------------------- Heart + Hidden Buttons -------------------- */
-
-.heartWrapper {
-  position:relative;
-  bottom: 2rem;
-  right: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 1000;
-  cursor: pointer;
-}
-
-.heartIcon {
-  font-size: 2.5rem;
-  animation: spin 6s linear infinite;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.hiddenButtons {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.heartGif {
-  width: 11rem; /* Adjust to match your design */
-  height: 10rem;
-  cursor: pointer;
-  position: relative
-  ;
-}
-
-
-/* -------------------- Existing Buttons -------------------- */
-
-.homeButton {
-  background-color: #CCFF26;
-  color: black;
-}
-
-.loginButton {
-  background-color: #CCFF26;
-  color: black;
-}
-
-.bottomRightButton {
-  align-self: flex-end;
-}

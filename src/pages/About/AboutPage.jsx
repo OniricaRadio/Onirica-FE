@@ -2,11 +2,9 @@ import { useState } from "react";
 import styles from "./AboutPage.module.css";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
-import Button from "../../components/button/Button";
+import HeartNav from "../../components/heart/HeartNav";
 
 function AboutPage() {
-  const [showButtons, setShowButtons] = useState(false);
-
   return (
     <>
       <Header />
@@ -28,21 +26,7 @@ function AboutPage() {
             Thank you for coming.
           </p>
         </div>
-
-        <div
-        className={styles.heartWrapper}
-        onMouseEnter={() => setShowButtons(true)}
-        onMouseLeave={() => setShowButtons(false)}
-        >
-        <img src="../../../public/img/heart.gif" alt="rotating heart" className={styles.heartGif} />
-
-        {showButtons && (
-          <div className={styles.hiddenButtons}>
-            <Button className={styles.homeButton} text="home" to="/" />
-            <Button className={styles.loginButton} text="login" to="/login" />
-          </div>
-        )}
-      </div>
+        <HeartNav/>
       </div>
       <Footer />
     </>
