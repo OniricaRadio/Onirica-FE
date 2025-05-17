@@ -44,8 +44,8 @@ function HomePage() {
                 <Button 
                 type = "button"
                 className = {styles.aboutButton}
-                text = "about"
-                to = {"/about"}
+                text="about"
+                to= {"/about"}
                 />
                 <Button 
                 type = "button"

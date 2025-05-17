@@ -1,0 +1,27 @@
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-family: 'Syne Tactile', sans-serif;
+    font-size: 2.5rem;
+    color: black;
+    align-items: center;       /* center horizontally */
+    gap: 1rem;
+    padding: 1rem 0;
+
+    max-width: 600px;          /* limits the width */
+    margin: 0 auto;            /* centers the container */
+    text-align: center;        /* centers text inside */
+}
+
+.titleContainer .title {
+    margin: 0;
+}
+
+.text {
+    font-family: 'Syne Mono', monospace;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+}
