@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "./HomePage.module.css";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
+import Button from "../../components/button/Button";
 
 function HomePage() {
     const gifList = [
@@ -39,6 +40,23 @@ function HomePage() {
                     className={styles.backgroundImage}
                 />
                 <h1 className={styles.title}>ONiriCA</h1>
+
+                <Button 
+                type = "button"
+                className = {styles.aboutButton}
+                text = "about"
+                />
+                <Button 
+                type = "button"
+                className = {styles.loginButton}
+                text = "log in"
+                />
+                <Button 
+                type = "button"
+                className = {styles.curatorButton}
+                text = "curator's picks"
+                />
+
             </div>
             <Footer />
         </>
