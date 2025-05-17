@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap');
 
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 75vh; 
+    overflow: hidden; 
+}
 
 .bodyContainer {
     position: relative;
@@ -7,10 +13,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 45rem;
-    overflow: hidden;
     padding: 1rem;
     text-align: center;
+    flex-grow: 1; 
+    overflow-y: auto; 
+    min-height: 0; 
 }
 
 .backgroundImage {
@@ -25,20 +32,22 @@
 }
 
 .title {
-    position: relative;
-    z-index: 1;
     font-family: 'Syne Tactile', sans-serif;
-    font-size: clamp(2.5rem, 8vw, 100px);
+    font-size: 8rem;
     color: #F9F4F5;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-    transition: color 0.3s ease;
+    z-index: 2;
+    position: relative;
     margin: 1rem 0;
+    transition: color 0.3s ease;
+    will-change:color;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .title:hover {
     color: #0D00A4;
 }
-
 
 .aboutButton,
 .loginButton,
@@ -50,6 +59,7 @@
     cursor: pointer;
     transition: background 0.4s ease, color 0.4s ease;
     margin: 1rem 2.5rem;
+    font-size: 1.1rem;
 }
 
 
@@ -71,49 +81,70 @@
     align-self: flex-start;
 }
 
+
 .aboutButton:hover,
 .loginButton:hover,
 .curatorButton:hover {
     background: linear-gradient(135deg, #000000, #333333);
     color: #CA7DF9;
 }
+.titleWrapper {
+    position: relative;
+    display: inline-block;
+}
 
+.hiddenButtons {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+    opacity: 0;
+    pointer-events: none;
+    width: max-content;
+    max-width: 90vw;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+}
+
+.titleWrapper:hover .hiddenButtons {
+    opacity: 1;
+    pointer-events: auto;
+}
 
 @media (max-width: 768px) {
-    .backgroundImage {
-        display: none;
+    .bodyContainer {
+        height: auto; 
+        padding: 2rem 1rem;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        flex-grow: 1; 
+        overflow-y: auto; 
     }
 
-    .bodyContainer {
-        height: 100vh;
-        justify-content: center;
-        padding-top: 10rem;
+    .backgroundImage {
+        display: none;
+        height: 0;
+        width: 0;
+        visibility: hidden;
     }
 
     .title {
-        font-size: 2.5rem;
-        position: absolute;
-        top: 2rem;
-        left: 50%;
-        transform: translateX(-50%);
+        font-size: 5rem;
+        color: black;
+        text-shadow: none;
+        margin-bottom: 1rem;
     }
 
-    .aboutButton {
-        position: absolute;
-        top: 6.5rem;
-        left: 44%;
-        transform: translateX(-50%);
-        align-self: center;
-        font-size: 1rem;
-        padding: 0.6rem 1.5rem;
-    }
-
+    .aboutButton,
     .loginButton,
     .curatorButton {
-        display: block;
-        margin: 1rem auto;
-        align-self: center;
-        font-size: 1rem;
-        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem auto;
+        width: 100%;
+        max-width: 180px;
     }
 }
