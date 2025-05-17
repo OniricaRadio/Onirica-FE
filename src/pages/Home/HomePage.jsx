@@ -45,16 +45,19 @@ function HomePage() {
                 type = "button"
                 className = {styles.aboutButton}
                 text = "about"
+                to = {"/about"}
                 />
                 <Button 
                 type = "button"
                 className = {styles.loginButton}
                 text = "log in"
+                to = {"/login"}
                 />
                 <Button 
                 type = "button"
                 className = {styles.curatorButton}
                 text = "curator's picks"
+                to = {"/picks"}
                 />
 
             </div>
