@@ -10,7 +10,7 @@
     width: 100%;
 }
 
-/* Text ribbon with Now Playing and Player */
+
 .textRibbon {
     display: flex;
     background-color: #CA7DF9;
@@ -21,13 +21,13 @@
     width: -webkit-fill-available;
 }
 
-/* Now Playing section */
+
 .nowPlaying {
     margin: 0rem;
     margin-left: 1rem;
 }
 
-/* Player container */
+
 .playerContainer {
     height: 5rem;
     width: 25rem;
@@ -40,43 +40,38 @@
     border-radius: 5px;
 }
 
-/* 📱 Mobile adjustments */
+
 @media (max-width: 768px) {
-    /* Ensure full screen height for header container */
     .headerContainer {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         justify-content: center;
         align-items: center;
         text-align: center;
         width: 100%;
-        padding: 0 1rem;
         box-sizing: border-box;
     }
 
-    /* Adjust text ribbon layout */
+    
     .textRibbon {
-        flex-direction: column;
+        /*flex-direction: column;*/
         height: auto;
         margin-top: 0;
-        justify-content: center; /* Centering content on mobile */
+        justify-content: center;
     }
 
     /* Adjust player container size */
     .playerContainer {
-        width: 80%; /* Reduced width for mobile */
-        height: 4rem; /* Reduced height */
+        width: 80%; 
+        height: 4rem; 
         padding: 1rem;
     }
 
-    /* Reduce font size for mobile */
+    
     .nowPlaying {
-        font-size: 1rem; /* Smaller font size */
+        font-size: 1rem; 
     }
 
-    /* Adjust text ribbon for mobile */
+   
     .textRibbon {
         padding: 1rem 0;
     }
