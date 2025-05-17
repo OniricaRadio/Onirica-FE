@@ -1,30 +1,52 @@
-import styles from "./AboutPage.module.css"
+import { useState } from "react";
+import styles from "./AboutPage.module.css";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
+import Button from "../../components/button/Button";
 
-function AboutPage(){
-return(
+function AboutPage() {
+  const [showButtons, setShowButtons] = useState(false);
+
+  return (
     <>
-    <Header/>
-    <div className={styles.titleContainer}>
-        <h1 className={styles.title}> About </h1>
-        <p className={styles.text}>ONiriCA comes from the deep wish of making community, the sharing is caring culture and just pure enjoyment of celebrating music and it’s transcendental nature.
- 
-    It’s intended to be a recreational space, a grounding yet spiralling point and hopefully, a source of discovery for you. 
- 
-    The song selection changes every two weeks. You can register to save a song into an personal archive for later reference or you can just stay and enjoy the playlist.
- 
-    If you want to know more about the curator and the project feel free to follow → @lifeafterlove____ or @onirica.flac on instagram.
- 
-    Thank you for coming.</p>
-    </div>
+      <Header />
+      <div className={styles.titleContainer}>
+        <h1 className={styles.title}>About</h1>
+      </div>
 
-    <Footer/>
+      <div className={styles.contentWrapper}>
+        <div className={styles.textBlock}>
+          <p className={styles.text}>
+            ONiriCA comes from the deep wish of making community, the sharing is caring culture and just pure enjoyment of celebrating music and its transcendental nature.
+            <br className={styles.gap} />
+            It’s intended to be a recreational space, a grounding yet spiralling point and hopefully, a source of discovery for you.
+            <br className={styles.gap} />
+            The song selection changes every two weeks. You can register to save a song into a personal archive for later reference or you can just stay and enjoy the playlist.
+            <br className={styles.gap} />
+            If you want to know more about the curator and the project feel free to follow → @lifeafterlove____ or @onirica.flac on instagram.
+            <br className={styles.gap} />
+            Thank you for coming.
+          </p>
+        </div>
+
+        <div
+        className={styles.heartWrapper}
+        onMouseEnter={() => setShowButtons(true)}
+        onMouseLeave={() => setShowButtons(false)}
+        >
+        <img src="../../../public/img/heart.gif" alt="rotating heart" className={styles.heartGif} />
+
+        {showButtons && (
+          <div className={styles.hiddenButtons}>
+            <Button className={styles.homeButton} text="home" to="/" />
+            <Button className={styles.loginButton} text="login" to="/login" />
+          </div>
+        )}
+      </div>
+      </div>
+      <Footer />
     </>
-    
-
-);
-
+  );
 }
 
 export default AboutPage;

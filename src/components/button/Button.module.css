@@ -7,10 +7,18 @@
     gap: 8px;
     border: none;
     cursor: pointer;
+    background-color: #0D00A4;
+    color: #CCFF26;
+    border-radius: 2rem;
   }
   
   .icon {
     width: 70px;
     height: 70px;
+  }
+
+  .button:hover{
+    background: linear-gradient(135deg, #000000, #333333);
+    color: #CA7DF9;
   }
   
