@@ -12,6 +12,9 @@ function HeartNav() {
       onMouseLeave={() => setShowButtons(false)}
     >
       <img src="/public/img/heart.gif" alt="rotating heart" className={styles.heartGif} />
+      {!showButtons && (
+        <div className={styles.hoverMessage}>hover me for navigation</div>
+      )}
 
       {showButtons && (
         <div className={styles.hiddenButtons}>

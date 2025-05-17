@@ -11,15 +11,23 @@
   
   
   .heartGif {
-    width: 11rem; 
+  width: 13rem; 
   height: 10rem;
   }
   
   .hiddenButtons {
-    margin-top: 1rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  }
+
+  .hoverMessage{
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 0.1rem;
+    font-family: 'Syne Mono', monospace;
+    transition: opacity 0.3s ease;
   }
 
   
