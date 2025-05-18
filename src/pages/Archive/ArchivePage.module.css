@@ -1,0 +1,25 @@
+.titleContainer{
+    display:flex;
+    width: 65vh;
+    height: 20vh;
+    justify-content: space-between;
+    margin-left: 7vh;
+    position: relative;
+    bottom: 4vh;
+    flex-direction: row;
+
+}
+
+.title{
+    font-family: 'Syne Tactile';
+    font-size: 5rem; 
+    
+}
+
+.nickname{
+    position: relative;
+    font-family: 'Syne Mono';
+    font-size: 1.5rem;
+    top: 9vh;
+
+}

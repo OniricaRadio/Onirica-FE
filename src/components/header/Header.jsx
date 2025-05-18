@@ -3,6 +3,7 @@ import styles from "./Header.module.css";
 import ButtonSound from "../buttonSound/ButtonSound"
 import Button from "../button/Button";
 import saveIcon from "../../../public/img/starblue.svg"
+import SongInfo from "../songInfo/SongInfo";
 
 
 function Header() {
@@ -39,7 +40,7 @@ function Header() {
     <div className={styles.textRibbon}>
         <p className={styles.nowPlaying}>Now Playing:</p>
         <div className={styles.playerContainer}>
-            <p>Strawberry - Doss</p>
+            <SongInfo/>
         </div>
         <ButtonSound isPlaying={isPlaying} toggleSound={togglePlay} />
      <Button icon={saveIcon} alt={ "saveIcon"} className={styles.saveIcon}/>
