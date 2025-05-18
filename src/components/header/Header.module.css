@@ -40,6 +40,10 @@
     border-radius: 5px;
 }
 
+.saveIcon{
+    background-color: transparent;
+}
+
 
 @media (max-width: 768px) {
     .headerContainer {
@@ -53,13 +57,12 @@
 
     
     .textRibbon {
-        /*flex-direction: column;*/
         height: auto;
         margin-top: 0;
         justify-content: center;
     }
 
-    /* Adjust player container size */
+    
     .playerContainer {
         width: 80%; 
         height: 4rem; 
