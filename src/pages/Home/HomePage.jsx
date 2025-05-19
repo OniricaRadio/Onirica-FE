@@ -59,8 +59,8 @@ function HomePage() {
                             <Button 
                                 type="button"
                                 className={styles.loginButton}
-                                text="log in"
-                                to="/login"
+                                text="log songs"
+                                to="/log"
                             />
                             <Button 
                                 type="button"
