@@ -19,7 +19,7 @@ function HeartNav() {
       {showButtons && (
         <div className={styles.hiddenButtons}>
           <Button className={styles.homeButton} text="home" to="/" />
-          <Button className={styles.loginButton} text="login" to="/login" />
+          <Button className={styles.loginButton} text="log songs" to="/log" />
           <Button className={styles.loginButton} text="curator's picks" to="/picks" />
 
         </div>
