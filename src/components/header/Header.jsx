@@ -1,22 +1,68 @@
-import { useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import styles from "./Header.module.css";
-import ButtonSound from "../buttonSound/ButtonSound"
+import ButtonSound from "../buttonSound/ButtonSound";
 import Button from "../button/Button";
-import saveIcon from "../../../public/img/starblue.svg"
+import saveIcon from "../../../public/img/starblue.svg";
+import SongInfo from "../songInfo/SongInfo";
 
 function Header() {
-    return (
+  const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [songs, setSongs] = useState([]);
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
+
+  useEffect(() => {
+    fetch("http://localhost:8080/api/songs")
+      .then((res) => res.json())
+      .then((data) => setSongs(data))
+      .catch((err) => console.error("Failed to fetch songs:", err));
+  }, []);
+
+  const togglePlay = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      audio.play().catch((err) => console.error("Playback failed:", err));
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  // Handle song end: play next song automatically
+  const handleEnded = () => {
+    setCurrentSongIndex((prevIndex) =>
+      prevIndex + 1 < songs.length ? prevIndex + 1 : 0
+    );
+    setIsPlaying(false);
+  };
+
+  if (songs.length === 0) return <p>Loading songs...</p>;
+
+  let currentSong = songs[currentSongIndex];
+  let audioSrc = `http://localhost:8080${currentSong.url}`;
+
+  return (
     <div className={styles.headerContainer}>
-    <div className={styles.textRibbon}>
+      <div className={styles.textRibbon}>
         <p className={styles.nowPlaying}>Now Playing:</p>
         <div className={styles.playerContainer}>
-            <p>rheya - wild nothing </p>
+          <SongInfo song={currentSong} />
         </div>
-     <ButtonSound/>
-     <Button icon={saveIcon} alt={ "saveIcon"} className={styles.icon}/>
-    </div>    
+
+        <ButtonSound isPlaying={isPlaying} toggleSound={togglePlay} />
+        <Button icon={saveIcon} alt={"saveIcon"} className={styles.saveIcon} />
+
+        <audio
+          ref={audioRef}
+          src={audioSrc}
+          preload="auto"
+          onEnded={handleEnded}
+        />
+      </div>
     </div>
-);
+  );
 }
 
 export default Header;

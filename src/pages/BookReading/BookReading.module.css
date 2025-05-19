@@ -1,0 +1,47 @@
+
+.contentWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .textBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+    width: 100%;
+    position: relative;
+  }
+  
+  
+  .titleContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-family: 'Syne Tactile', sans-serif;
+    font-size: 3rem;
+    color: black;
+    margin-left: 15rem;
+    gap: 1rem;
+    padding: 1rem 0;
+    right: 7rem;
+  }
+  
+  .titleContainer .title {
+    margin: 0;
+  }
+  
+  
+  .text {
+    font-family: 'Syne Mono', monospace;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #333;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  

@@ -6,7 +6,7 @@ const ButtonSound = ({ isPlaying, toggleSound }) => {
 
   return (
       <button className={styles.button} onClick={toggleSound}>
-          <img src={isPlaying ? stopIcon : playIcon} alt="Button Sound" />
+          <img src={isPlaying ? stopIcon : playIcon} alt="Play/Pause" />
       </button>
   );
 };

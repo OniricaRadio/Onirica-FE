@@ -11,7 +11,7 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
     padding: 0 1rem;
-    z-index: 2;
+    z-index: 2; 
 }
 
 
@@ -35,11 +35,11 @@
 
 @media (max-width: 768px) {
     .footerContainer {
-        flex-direction: row; 
+        flex-direction: row;
         height: auto;
         gap: 0.5rem;
         padding: 0rem 0.5rem;
-        text-align: center;
+        text-align: center; 
     }
 
     .footerContainer p,
@@ -47,4 +47,4 @@
         font-size: 1rem;
         margin: 0.25rem 0;
     }
-}
+}   

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "./SongForm.module.css"; 
-import { createSong } from "../../services/songApi"; 
+import styles from "./SongForm.module.css"; 
+import { createSong } from "../../services/SongApi"; 
 
 function SongForm({ onSongCreated }) {
   const [title, setTitle] = useState("");
@@ -17,7 +17,7 @@ function SongForm({ onSongCreated }) {
     try {
       await createSong(song);
       alert("Song created successfully!");
-      onSongCreated && onSongCreated(); // Optional callback to refresh song list
+      onSongCreated && onSongCreated(); 
       setTitle("");
       setArtist("");
       setUrl("");
@@ -30,8 +30,8 @@ function SongForm({ onSongCreated }) {
   };
 
   return (
-    <form className="song-form" onSubmit={handleSubmit}>
-      <div className="mb-3">
+    <form className={styles.songForm} onSubmit={handleSubmit}>
+      <div className={styles.label}>
         <label>Title</label>
         <input
           type="text"
@@ -41,7 +41,7 @@ function SongForm({ onSongCreated }) {
         />
       </div>
 
-      <div className="mb-3">
+      <div className={styles.label}>
         <label>Artist</label>
         <input
           type="text"
@@ -51,7 +51,7 @@ function SongForm({ onSongCreated }) {
         />
       </div>
 
-      <div className="mb-3">
+      <div className={styles.label}>
         <label>Audio URL</label>
         <input
           type="text"
@@ -61,7 +61,7 @@ function SongForm({ onSongCreated }) {
         />
       </div>
 
-      <div className="mb-3">
+      <div className={styles.label}>
         <label>Cover URL</label>
         <input
           type="text"
@@ -70,7 +70,7 @@ function SongForm({ onSongCreated }) {
         />
       </div>
 
-      <button type="submit" className="btn btn-success">
+      <button type="submit" className={styles.buttonSave}>
         Save Song
       </button>
     </form>

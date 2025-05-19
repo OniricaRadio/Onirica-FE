@@ -17,6 +17,7 @@ function HomePage() {
     ];
 
     const [currentGif, setCurrentGif] = useState(gifList[0]);
+    const [showButtons, setShowButtons] = useState(false);
 
     useEffect(() => {
         const changeGif = () => {
@@ -33,33 +34,44 @@ function HomePage() {
     return (
         <>
             <Header />
+            <div className={styles.pageWrapper}>
             <div className={styles.bodyContainer}>
                 <img
                     src={currentGif}
                     alt="Background animation"
                     className={styles.backgroundImage}
                 />
-                <h1 className={styles.title}>ONiriCA</h1>
+                <div 
+                  className={styles.titleWrapper}
+                  onMouseEnter={() => setShowButtons(true)}
+                  onMouseLeave={() => setShowButtons(false)}
+                >
+                    <h1 className={styles.title}>ONiriCA</h1>
 
-                <Button 
-                type = "button"
-                className = {styles.aboutButton}
-                text="about"
-                to= {"/about"}
-                />
-                <Button 
-                type = "button"
-                className = {styles.loginButton}
-                text = "log in"
-                to = {"/login"}
-                />
-                <Button 
-                type = "button"
-                className = {styles.curatorButton}
-                text = "curator's picks"
-                to = {"/picks"}
-                />
-
+                    {showButtons && (
+                        <div className={styles.hiddenButtons}>
+                            <Button 
+                                type="button"
+                                className={styles.aboutButton}
+                                text="about"
+                                to="/about"
+                            />
+                            <Button 
+                                type="button"
+                                className={styles.loginButton}
+                                text="log in"
+                                to="/login"
+                            />
+                            <Button 
+                                type="button"
+                                className={styles.curatorButton}
+                                text="curator's picks"
+                                to="/picks"
+                            />
+                        </div>
+                    )}
+                </div>
+            </div>
             </div>
             <Footer />
         </>
