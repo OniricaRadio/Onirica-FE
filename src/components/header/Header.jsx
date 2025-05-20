@@ -14,7 +14,10 @@ function Header() {
   useEffect(() => {
     fetch("http://localhost:8080/api/songs")
       .then((res) => res.json())
-      .then((data) => setSongs(data))
+      .then((data) => {
+        console.log("Songs fetched:", data); 
+        setSongs(data);
+      })
       .catch((err) => console.error("Failed to fetch songs:", err));
   }, []);
 
@@ -30,18 +33,23 @@ function Header() {
     setIsPlaying(!isPlaying);
   };
 
-  // Handle song end: play next song automatically
+  
   const handleEnded = () => {
-    setCurrentSongIndex((prevIndex) =>
-      prevIndex + 1 < songs.length ? prevIndex + 1 : 0
-    );
-    setIsPlaying(false);
+    if (songs.length <= 1) return;
+  
+    let nextIndex;
+    do {
+      nextIndex = Math.floor(Math.random() * songs.length);
+    } while (nextIndex === currentSongIndex);
+  
+    setCurrentSongIndex(nextIndex);
   };
 
   if (songs.length === 0) return <p>Loading songs...</p>;
 
   let currentSong = songs[currentSongIndex];
   let audioSrc = `http://localhost:8080${currentSong.url}`;
+  
 
   return (
     <div className={styles.headerContainer}>
