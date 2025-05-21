@@ -1,0 +1,34 @@
+.songForm{
+    font-family: 'Syne Mono';
+    background-color: black;
+    border-radius:20px;
+    color:#CCFF26;
+    width: 50vh;
+    height:47vh;
+    font-size: 1.5rem;
+    justify-items: flex-start;
+}
+
+.input {
+    position: relative;
+    display:flex;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1rem;
+    font-family: 'Syne Mono', sans-serif;
+    background-color: #ffffff;
+    color: #0D00A4;
+    margin-left: 18vh;
+  }
+
+  label {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-left: 4vh;
+    font-size: 1.2rem;
+    gap: 1rem;
+    width: 100%;
+    
+  }

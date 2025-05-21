@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./SongForm.module.css"; 
 import { createSong } from "../../services/SongApi"; 
+import Button from "../button/Button";
 
 function SongForm({ onSongCreated }) {
   const [title, setTitle] = useState("");
@@ -33,7 +34,7 @@ function SongForm({ onSongCreated }) {
     <form className={styles.songForm} onSubmit={handleSubmit}>
       <div className={styles.label}>
         <label>Title</label>
-        <input
+        <input className={styles.input}
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
@@ -43,7 +44,7 @@ function SongForm({ onSongCreated }) {
 
       <div className={styles.label}>
         <label>Artist</label>
-        <input
+        <input className={styles.input}
           type="text"
           value={artist}
           onChange={(e) => setArtist(e.target.value)}
@@ -53,7 +54,7 @@ function SongForm({ onSongCreated }) {
 
       <div className={styles.label}>
         <label>Audio URL</label>
-        <input
+        <input className={styles.input}
           type="text"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
@@ -62,17 +63,10 @@ function SongForm({ onSongCreated }) {
       </div>
 
       <div className={styles.label}>
-        <label>Cover URL</label>
-        <input
-          type="text"
-          value={coverUrl}
-          onChange={(e) => setCoverUrl(e.target.value)}
-        />
       </div>
-
-      <button type="submit" className={styles.buttonSave}>
-        Save Song
-      </button>
+      <Button type="submit" className={styles.buttonSave} text="submit"/>
+      <Button className={styles.archiveButton} text="archive" to="/archive" />
+      
     </form>
   );
 }

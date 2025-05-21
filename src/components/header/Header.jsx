@@ -20,6 +20,17 @@ function Header() {
       })
       .catch((err) => console.error("Failed to fetch songs:", err));
   }, []);
+  
+  useEffect(() => {
+    if (!audioRef.current) return;
+  
+    audioRef.current.load(); // Reload the new audio src
+    audioRef.current.play().catch((err) => {
+      console.error("Playback failed:", err);
+    });
+  
+    setIsPlaying(true);
+  }, [currentSongIndex]);
 
   const togglePlay = () => {
     const audio = audioRef.current;

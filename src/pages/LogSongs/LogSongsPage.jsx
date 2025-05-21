@@ -1,7 +1,7 @@
 import Footer from "../../components/footer/Footer";
 import styles from "./LogSongsPage.module.css"
 import HeartNav from "../../components/heart/HeartNav"
-import SongForm from "../../components/loginForm/SongForm";
+import SongForm from "../../components/songForm/SongForm";
 
 function LogSongsPage(){
   return (
