@@ -63,7 +63,7 @@ function Header() {
   return (
     <div className={styles.headerContainer}>
       <div className={styles.textRibbon}>
-        <p className={styles.nowPlaying}>Now Playing:</p>
+        <p className={styles.nowPlaying}>now playing:</p>
         <div className={styles.playerContainer}>
           <SongInfo song={currentSong} />
         </div>

@@ -2,33 +2,26 @@ import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import styles from "./Button.module.css";
 
-function Button({ text, icon, alt, to, type = "button", className = "" }) {
+function Button({ text, icon, alt, to, onClick, type = "button", className = "" }) {
   const navigate = useNavigate();
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+    if (onClick) {
+      onClick(e); 
+    }
+
     if (to) {
       navigate(to);
     }
   };
 
   return (
-    <button
-      type={type}
-      className={`${styles.button} ${className}`}
-      onClick={handleClick}
-    >
-      {icon && (
-        <img
-          src={icon}
-          alt={alt || text || "icon"}
-          className={styles.icon}
-        />
-      )}
+    <button type={type} className={`${styles.button} ${className}`} onClick={handleClick}>
+      {icon && <img src={icon} alt={alt || text || "icon"} className={styles.icon} />}
       {text && <span>{text}</span>}
     </button>
   );
 }
-
 Button.propTypes = {
   text: PropTypes.string,
   icon: PropTypes.string, 
@@ -37,6 +30,10 @@ Button.propTypes = {
   type: PropTypes.string,
   className: PropTypes.string,
 };
-
 export default Button;
+
+
+
+
+
 
