@@ -1,32 +1,55 @@
-.infoContainer{
+.infoContainer {
     display: flex;
-    justify-items: center;
-    align-items: center;
-    font-family: 'Syne Tactile';
-    position: relative;
-    height: 100vh;
     flex-direction: column;
-    margin-left:0   ;
-
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 100vw;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  
+  .title {
+    font-family: 'Syne Tactile';
+    font-size: 5rem;
+    height: 6vh;
+    text-align: center;
+    margin-top:15vh;
+  }
+  
+  .input {
+    align-self: flex-end;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: white;
+    color: #0D00A4;
+    font-family: 'Syne Mono', monospace;
+    margin-top: 2rem;
+  }
+  
+  /* 📱 Mobile screen (375x667) */
+  @media (max-width: 480px), (max-height: 700px) {
+    .infoContainer {
+      padding: 13rem;
+      height:100vh;
     }
-
-    .title{
-        position: relative;
-        display: flex;
-        justify-self: center;
-        font-size: 5rem;
-        height: 15vh;
+  
+    .title {
+      font-size: 5rem;
+      height: auto;
+      margin-top: 18vh;
     }
-
-    .text{
-        position: relative;
-        font-size: 1.5rem;
-        display: flex;
-        justify-self: center;
-        align-self: end;
+  
+    .text {
+      font-size: 1rem;
+      margin-top: 0.5rem;
     }
-
-    .input{
-        align-self: flex-end;
-
+  
+    .input {
+      width: 90%;
+      align-self: center;
+      font-size: 1rem;
     }
+  }

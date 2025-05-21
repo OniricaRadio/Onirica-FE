@@ -9,8 +9,9 @@ function LogSongsPage(){
       <div className={styles.infoContainer}>
         <h1 className={styles.title}>Welcome</h1>
         <SongForm className={styles.input}/>
+        <HeartNav/>
       </div>
-      <HeartNav/>
+      
      <Footer/>
     </>
    
