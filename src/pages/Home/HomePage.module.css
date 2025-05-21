@@ -113,11 +113,22 @@
     pointer-events: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px), (max-height: 700px) {
+
+    .pageWrapper {
+        display: flex;
+        width: 145vw;
+        flex-direction: column; 
+        justify-content: center; 
+        overflow: hidden; 
+    }
     .bodyContainer {
         height: auto; 
+        top:2vh;
+        right:1vh;
+        width: 100%;
         padding: 2rem 1rem;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         text-align: center;
         flex-grow: 1; 
@@ -125,15 +136,17 @@
     }
 
     .backgroundImage {
-        display: none;
-        height: 0;
-        width: 0;
-        visibility: hidden;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
     }
 
     .title {
         font-size: 5rem;
-        color: black;
+        color: #CA7DF9;
         text-shadow: none;
         margin-bottom: 1rem;
     }

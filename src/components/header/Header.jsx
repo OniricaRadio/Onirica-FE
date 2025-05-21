@@ -1,8 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import styles from "./Header.module.css";
 import ButtonSound from "../buttonSound/ButtonSound";
-import Button from "../button/Button";
-import saveIcon from "../../../public/img/starblue.svg";
 import SongInfo from "../songInfo/SongInfo";
 
 function Header() {
@@ -69,10 +67,9 @@ function Header() {
         <div className={styles.playerContainer}>
           <SongInfo song={currentSong} />
         </div>
-
+        <div className={styles.buttonPlay}>
         <ButtonSound isPlaying={isPlaying} toggleSound={togglePlay} />
-        <Button icon={saveIcon} alt={"saveIcon"} className={styles.saveIcon} />
-
+        </div>
         <audio
           ref={audioRef}
           src={audioSrc}

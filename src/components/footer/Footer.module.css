@@ -33,10 +33,13 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 480px), (max-height: 700px) {
     .footerContainer {
+        position: relative;
         flex-direction: row;
+        right:1vh;
         height: auto;
+        width:147vw;
         gap: 0.5rem;
         padding: 0rem 0.5rem;
         text-align: center; 

@@ -33,7 +33,7 @@
     font-size: 1.5rem;
     z-index: 2;
     height: 5rem;
-    width: 15vw;
+    width: 18vw;
     align-self: center;
     background-color: #CCFF26;
     padding: 1rem;
@@ -43,7 +43,9 @@
     border-radius: 5px;
     margin-right:25vh;
 }
-
+.buttonPlay{
+    margin-right:15vh;
+}
 .saveIcon{
     background-color: transparent;
 }
@@ -51,11 +53,15 @@
 
 @media (max-width: 480px), (max-height: 700px) {
     .headerContainer {
-      padding: 1rem;
+    position: relative;
+    padding: 1rem;
+    width: 100vw;
+    right:4vh;
+
     }
   
     .textRibbon {
-      padding: 0.5rem;
+      padding: 3rem;
       width: 150%;
       gap: 0.5rem;
     }
@@ -65,8 +71,9 @@
     }
   
     .playerContainer {
-      width: 30%;       
+      width: 35%;       
       height: 10vh;
+      margin-top: 0;
       padding: 0.5rem;
       justify-self: flex-start;
     }
