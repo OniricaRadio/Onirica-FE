@@ -28,18 +28,27 @@
     font-family: 'Syne Mono', monospace;
     margin-top: 2rem;
   }
+
+  .navigation{
+    position:relative;
+    display: flex;
+    flex-direction: row-reverse;
+    bottom: 35vh;
+  }
   
   /* 📱 Mobile screen (375x667) */
   @media (max-width: 480px), (max-height: 700px) {
     .infoContainer {
-      padding: 13rem;
-      height:100vh;
+      padding: 20rem;
+      height:110vh;
+      
     }
   
     .title {
       font-size: 5rem;
       height: auto;
-      margin-top: 18vh;
+      margin-top: 1vh;
+      align-self: flex-end;
     }
   
     .text {
@@ -49,7 +58,17 @@
   
     .input {
       width: 90%;
-      align-self: center;
+      align-self: flex-start;
+      right: 10vh;
       font-size: 1rem;
     }
+    .navigation{
+      position:relative;
+      display: flex;
+      flex-direction: row-reverse;
+      bottom: 104vh;
+      justify-self: center;
+      margin-left: 117vh;
+    }
+    
   }
