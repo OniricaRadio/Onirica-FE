@@ -14,7 +14,7 @@
 .textRibbon {
     display: flex;
     background-color: #CA7DF9;
-    width: 200git vh;
+    width: 200vh;
     height: 3rem;
     margin-top: 2rem;
     justify-content: space-around;
@@ -65,7 +65,7 @@
     }
   
     .playerContainer {
-      width: 30%;       /* Stretch almost full width */
+      width: 30%;       
       height: 10vh;
       padding: 0.5rem;
       justify-self: flex-start;
