@@ -9,13 +9,14 @@ function ArchivePage(){
         
         <div className={styles.titleContainer}>
             <h1 className={styles.title}>Archive</h1>    
-            <p className={styles.nickname}>here you can see the songs you have saved!</p>
+            <p className={styles.text}>here you can see the songs you have added!</p>
         </div>
-        <div>
+        <div className={styles.archiveContainer}>
         <SavedSongs /> 
+        <HeartNav/>
         </div>
 
-        <HeartNav/>
+       
         <Footer/>
         
         </>

@@ -1,12 +1,13 @@
 .titleContainer{
     display:flex;
-    width: 65vh;
+    width: 91vh;
     height: 20vh;
     justify-content: space-between;
     margin-left: 7vh;
     position: relative;
     bottom: 4vh;
     flex-direction: row;
+    gap: 14vh;
 
 }
 
@@ -16,10 +17,80 @@
     
 }
 
-.nickname{
+.text{
     position: relative;
     font-family: 'Syne Mono';
     font-size: 1rem;
     top: 9vh;
+    line-height: 1.4;
 
 }
+
+.archiveContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+/* Mobile: 375x667 and similar */
+@media (max-width: 480px), (max-height: 700px) {
+    .titleContainer {
+      flex-direction: column;
+      align-items: center;
+      width: 90vw;
+      height: auto;
+      margin-left: 0;
+      gap: 4vh;
+      bottom: 0;
+    }
+  
+    .title {
+      font-size: 3rem;
+      text-align: center;
+    }
+  
+    .text {
+      font-size: 0.9rem;
+      top: 3vh;
+      line-height: 1.5;
+      text-align: center;
+      padding: 0 1rem;
+    }
+  
+    .archiveContainer {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+  
+  /* Tablet: between 478px and 973px */
+  @media (max-width: 973px) and (min-width: 478px) {
+    .titleContainer {
+      width: 95vw;
+      margin-left: 0;
+      gap: 6vh;
+      bottom: 2vh;
+    }
+  
+    .title {
+      font-size: 4rem;
+      text-align: center;
+    }
+  
+    .text {
+      font-size: 1rem;
+      top: 5vh;
+      line-height: 1.5;
+      text-align: center;
+      padding: 0 2rem;
+    }
+  
+    .archiveContainer {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+  
