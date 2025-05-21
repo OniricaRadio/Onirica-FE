@@ -1,13 +1,11 @@
 import { useState } from "react";
 import styles from "./AboutPage.module.css";
-import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import HeartNav from "../../components/heart/HeartNav";
 
 function AboutPage() {
   return (
     <>
-      <Header />
       <div className={styles.titleContainer}>
         <h1 className={styles.title}>About</h1>
       </div>

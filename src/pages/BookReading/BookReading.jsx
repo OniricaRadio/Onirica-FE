@@ -1,12 +1,10 @@
 import Footer from "../../components/footer/Footer";
-import Header from "../../components/header/Header";
 import HeartNav from "../../components/heart/HeartNav";
 import styles from "./BookReading.module.css"
 
 function BookReading(){
     return (
         <>
-        <Header/>
         <div className={styles.titleContainer}>
         <h1 className={styles.title}>Book a reading </h1>
       </div>

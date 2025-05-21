@@ -1,0 +1,72 @@
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(13, 0, 164, 0.8); /* translucent deep blue */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background-color: #0D00A4; /* deep blue */
+    color: #CCFF26;            /* neon yellow */
+    padding: 2rem;
+    border-radius: 2rem;
+    width: 90%;
+    max-width: 500px;
+    font-family: 'Syne Tactile', sans-serif;
+    box-shadow: 0 0 20px #00000088;
+  }
+  
+  .modal h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    gap: 0.5rem;
+  }
+  
+  input {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1rem;
+    font-family: 'Syne Tactile', sans-serif;
+    background-color: #ffffff;
+    color: #0D00A4;
+  }
+  
+  input:focus {
+    outline: 2px solid #CA7DF9;
+    background-color: #f0f0ff;
+  }
+  
+  /* Reusing your button style */
+  button {
+    font-family: 'Syne Tactile';
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #0D00A4;
+    color: #CCFF26;
+    border-radius: 2rem;
+    padding: 0.5rem
+  }  

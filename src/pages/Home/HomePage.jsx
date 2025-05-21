@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "./HomePage.module.css";
 import Footer from "../../components/footer/Footer";
-import Header from "../../components/header/Header";
 import Button from "../../components/button/Button";
 
 function HomePage() {
@@ -33,7 +32,7 @@ function HomePage() {
 
     return (
         <>
-            <Header />
+
             <div className={styles.pageWrapper}>
             <div className={styles.bodyContainer}>
                 <img
