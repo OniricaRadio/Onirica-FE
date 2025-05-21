@@ -24,7 +24,7 @@ function Header() {
   useEffect(() => {
     if (!audioRef.current) return;
   
-    audioRef.current.load(); // Reload the new audio src
+    audioRef.current.load(); 
     audioRef.current.play().catch((err) => {
       console.error("Playback failed:", err);
     });

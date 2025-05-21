@@ -29,6 +29,10 @@
 
 
 .playerContainer {
+    position: relative;
+    left: 10vh;
+    font-size: 1.5rem;
+    z-index: 2;
     height: 5rem;
     width: 25rem;
     align-self: center;
