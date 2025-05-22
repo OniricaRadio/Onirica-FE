@@ -1,12 +1,52 @@
-# React + Vite
+# 🎧 Onírica Radio Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación web que simula una radio donde los usuarios pueden crear, leer, actualizar y eliminar canciones de forma libre, sin autenticación.
 
-Currently, two official plugins are available:
+## 🛠️ Tecnologías
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend:** React + CSS Modules
+- **Backend:** Spring Boot + JPA (Hibernate) + MySQL/PostgreSQL (puedes elegir)
+- **Build Tool:** Maven
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Funcionalidades
+
+- Crear una canción
+- Ver todas las canciones
+- Editar una canción
+- Eliminar una canción
+
+---
+
+## 🧪 Cómo correr el proyecto
+
+### ▶ Backend (Spring Boot)
+1. Clona el repositorio
+2. Configura tu base de datos en `application.properties`
+3. Ejecuta la aplicación desde tu IDE o con Maven:
+   ```bash
+   mvn spring-boot:run
+### Frontend (React)
+Dirígete a la carpeta del frontend
+
+Instala las dependencias:
+
+
+npm install
+Corre el servidor de desarrollo:
+
+npm run dev
+
+
+## 📦 Endpoints API
+Método	Endpoint	Descripción
+GET	/api/songs	Obtener canciones
+POST	/api/songs	Crear nueva canción
+PUT	/api/songs/{id}	Editar una canción
+DELETE	/api/songs/{id}	Eliminar una canción
+
+
+## Autoria de Karisha Meléndez. 
+
+
