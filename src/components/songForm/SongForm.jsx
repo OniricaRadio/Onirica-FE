@@ -12,15 +12,6 @@ function SongForm({ onSongCreated }) {
   
   const hasScriptTags = (str) => /<\s*script/gi.test(str);
 
- 
-  const isValidUrl = (str) => {
-    try {
-      new URL(str);
-      return true;
-    } catch {
-      return false;
-    }
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,10 +28,6 @@ function SongForm({ onSongCreated }) {
       return;
     }
 
-    if (!isValidUrl(url)) {
-      alert("Please provide a valid audio URL.");
-      return;
-    }
 
     const song = { title, artist, url };
 
@@ -86,11 +73,11 @@ function SongForm({ onSongCreated }) {
         <label>Audio URL</label>
         <input
           className={styles.input}
-          type="url"
+          type="text"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           required
-          placeholder="https://example.com/audio.mp3"
+          placeholder="/audio/mysong.mp3"
         />
       </div>
 
