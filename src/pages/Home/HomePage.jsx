@@ -4,16 +4,17 @@ import Footer from "../../components/footer/Footer";
 import Button from "../../components/button/Button";
 
 function HomePage() {
-    const gifList = [
-        "/public/img/Art Fire GIF by Daniel Barreto.gif",
-        "/public/img/mirror GIF by ewanjonesmorris.gif",
-        "/public/img/Tree Mirror GIF by Blanca Viñas.gif",
-        "/public/img/Photography Reflection GIF by John Fogarty.gif",
-        "/public/img/sphere.gif",
-        "/public/img/spiral.gif",
-        "/public/img/spiral3d.gif",
-        "/public/img/spiralwater.gif"
-    ];
+   const gifList = [
+        "/img/ArtFire.gif",
+        "/img/heart.gif",
+        "/img/mirrorGIFbyewanjonesmorris.gif",
+        "/img/Photography.gif",
+        "/img/sphere.gif",
+        "/img/spiral3d.gif",
+        "/img/spiral.gif",
+        "/img/spiralwater.gif",
+        "/img/TreeMirror.gif"
+];
 
     const [currentGif, setCurrentGif] = useState(gifList[0]);
     const [showButtons, setShowButtons] = useState(false);
